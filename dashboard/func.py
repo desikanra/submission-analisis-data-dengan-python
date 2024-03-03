@@ -51,6 +51,21 @@ class DataAnalyzer:
 
         return bystate_df, most_common_state
     
+    def create_rfm_df(self):
+        rfm_df = self.df.groupby(by="customer_id", as_index=False).agg({
+            "order_approved_at": "max", #mengambil tanggal order terakhir
+            "order_id": "nunique",
+            "payment_value": "sum"
+        })
+        rfm_df.columns = ["customer_id", "order_purchase_timestamp", "frequency", "monetary"]
+        
+        rfm_df["order_purchase_timestamp"] = rfm_df["order_purchase_timestamp"].dt.date
+        recent_date = self.df["order_approved_at"].dt.date.max()
+        rfm_df["recency"] = rfm_df["order_purchase_timestamp"].apply(lambda x: (recent_date - x).days)
+        rfm_df.drop("order_purchase_timestamp", axis=1, inplace=True)
+    
+        return rfm_df
+    
 class MapPlotter:
     def __init__(self, data, plt, mpimg, urllib, st):
         self.data = data
