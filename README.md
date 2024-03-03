@@ -15,6 +15,8 @@ Proyek ini adalah proyek submission untuk kelas "Belajar Analisis Data dengan Py
 - `data/`: Direktori ini memuat data raw file .csv yang digunakan.
 - `notebook.ipynb`: File ini adalah notebook yang digunakan untuk melakukan analisis data.
 - `README.md`: File dokumentasi ini.
+- `requiremnts.txt` : File requirement untuk streamlit dashboard.
+- `url.txt` : File berisi url streamlit dashboard.
 
 ## Data Sources
 Proyek ini menggunakan dataset publik E-Commerce dari [Belajar Analisis Data dengan Python's Final Project](https://drive.google.com/file/d/1MsAjPM7oKtVfJL_wRp1qmCajtSG1mdcK/view) oleh [Dicoding](https://www.dicoding.com/).
