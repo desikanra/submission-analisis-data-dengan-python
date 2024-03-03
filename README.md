@@ -1,5 +1,7 @@
 # E-Commerce Public Data Analysis - Dicoding
 
+[E-Commerce Data Dashboard Streamlit App](https://ecommerce-data-analysis-project.streamlit.app/)
+
 ## Table of Contents
 - [Overview](#overview)
 - [Project Structure](#project-structure)
