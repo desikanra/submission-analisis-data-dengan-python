@@ -9,11 +9,11 @@ from func import DataAnalyzer, MapPlotter
 
 # Dataset
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
-all_data = pd.read_csv("D:/Bangkit/Submission/data/all_data.csv")
+all_data = pd.read_csv("https://media.githubusercontent.com/media/desikanra/submission-analisis-data-dengan-python/main/dashboard/all_data.csv")
 all_data.sort_values(by="order_approved_at", inplace=True)
 all_data.reset_index(inplace=True)
 
-geolocation = pd.read_csv("D:/Bangkit/Submission/data/geolocation_dataset.csv")
+geolocation = pd.read_csv("https://media.githubusercontent.com/media/desikanra/submission-analisis-data-dengan-python/main/data/geolocation_dataset.csv")
 data = geolocation
 # data = geolocation.drop_duplicates(subset='customer_unique_id')
 
