@@ -64,6 +64,8 @@ st.title("E-Commerce Public Data Analysis")
 # Add text or descriptions
 st.write("**Dashboard untuk analisis Data Publik E-Commerce.**")
 
+st.subheader("Total Pemesanan")
+col1, col2 = st.columns(2)
 with col1:
     total_order = daily_orders_df["order_count"].sum()
     formatted_total_order = "{:.2f}".format(total_order)
@@ -84,6 +86,8 @@ sns.lineplot(
 )
 ax.tick_params(axis="x", rotation=45)
 ax.tick_params(axis="y", labelsize=15)
+ax.set_xlabel("Tanggal Pemesanan", fontsize=15)
+ax.set_ylabel("Total Pemesanan", fontsize=15)
 st.pyplot(fig)
 
 # Customer Spend Money
@@ -112,6 +116,8 @@ sns.lineplot(
 
 ax.tick_params(axis="x", rotation=45)
 ax.tick_params(axis="y", labelsize=15)
+ax.set_xlabel("Tanggal Pemesanan", fontsize=15)
+ax.set_ylabel("Total Pengeluaran", fontsize=15)
 st.pyplot(fig)
 
 # Order Items
